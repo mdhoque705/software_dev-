@@ -31,7 +31,7 @@
     <dt><b>Dogs:</b></dt>
     <dd>The dog is a domesticated descendant of carnivorous Mammal</dd>
 </dl>
-<h2>Tables</h2> 
+<h2 id="Tables">Tables</h2> 
 <table border="1">
     <tr>
         <td>Column 1</td>
@@ -52,7 +52,7 @@
 </table>
 <br><br>
 <table>
-    <tr>
+    <tr bgcolor="yellow">
         <td></td>
         <th>Saturday</th>
         <th>Sunday</th>
@@ -65,8 +65,78 @@
     <tr>
         <th>Total Sales:</th>
         <td align="center">$600</td>
-        <td align="center">$675</td>
+        <td align="center" bgcolor="Orange">$675</td>
     </tr>
 </table>
+<br><br>
+<table width="400" height="120" bgcolor="Lightgreen" border="1">
+    <tr bgcolor="Gray">
+        <th colspan="2" align="center">Dancing Course Fee</th>
+    </tr>
+    <tr>
+        <th align="center">Adult, 18+ years-old</th>
+        <td align="center">$250</td>
+    </tr>
+    <tr>
+        <th align="center">10 years-old to 17 years-old</th>
+        <td align="center">$135</td>
+    </tr>
+</table>
+<h2 id="images">Images</h2>
+<hr>
+<img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City">
+<img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City">
+<figure>
+    <img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City">
+     <img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City" align="right">
+     <figcaption>I Love NYC -- 2025</figcaption>
+</figure>
+<h2 id="Links">Links</h2>
+<hr>
+<p>Link to open an external website</p>
+<p>Visit <a href="https://www.qcc.cuny.edu/" target="_blank" rel="noopener noreferrer">QCC website</a>  for more Information!</p>
+<p><em>Link to an email address</em></p>
+<p>Contact Professor Wu <a href="mailto:mdhoque705@gmail.com">by email</a></p>
+<p><em>Link from an Image</em></p>
+<figure>
+    <a href="https://www.nyc.gov/" target="_blank" rel="noopener noreferrer">
+        <img src="images/nyc.jpg" alt="Image of New York City" width="300px" title="Visit New York City">
+    </a> 
+</figure>
+<br>
+<p>Connect QCC Via Social Media</p>
+<figure>
+    <a href="https://www.facebook.com/QueensboroughCUNY" target="_blank" rel="noopener noreferrer"><img src="images/Facebook logo_icon.svg" alt="Connect to QCC Via Facebook" title="Stay connected to QCC Via Facebook" width="50px"></a>
+    <a href="https://www.instagram.com/queensboroughcc_cuny/" target="_blank" rel="noopener noreferrer"><img src="images/snapchat_icon.svg" alt="Connect to QCC Via Snapchat" title="Stay connected to QCC Via Snapchat" width="50px"></a>
+</figure>
+<br>
+<p id="Places"><em>Link to an internal/local webpage </em></p>
+<p> Places to Visit in NYC</p>
+<ul>
+    <li><a href="centralpark.html">Central Park</a></li>
+    <li><a href="times_square.html">Times Square</a></li>
+</ul>
+<br>
+<p><em>Image Mapping</em></p>
+<!--Target Map-->
+<figure>
+    <img src="images/nyc.jpg" alt="Image of New York City" width="500px" height="400px" usemap="#nyc_map">
+    <figcaption>I love NYC -- 2025</figcaption>
+</figure>
+<!--Define the map-->
+<map name="nyc_map">
+    <area shape="rect" coords="200px,150px,300px,250px" href="centralpark.html" alt="Link to Central Park webpage">
+</map>
+<br><br>
+<p><em>Link to a specific section of the same webpage</em></p>  
+<nav>
+    <a href="#">Go to the top of the page</a>
+    <span>|</span>
+    <a href="#Tables">Tables</a>
+    <span>|</span>
+    <a href="#Links">Links</a>
+    <span>|</span>
+    <a href="#images">Images</a>
+</nav>  
 </body>
 </html>

@@ -1,0 +1,272 @@
+header{
+    display: block;
+    background-color: #ffffff;
+    height: 180px;
+    box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.445);
+}
+
+body{
+    background-color: #ffc400bc;
+}
+.caption{
+    padding: 30px;
+}
+.caption h1{
+    color: #b61827;
+    text-align: right;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+.caption p{
+    text-align: right;
+    color: #b61827;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.25rem;
+}
+.logo{
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.logo img{
+    align-items: left;
+    height: 175px;
+    position: absolute;
+    top: 10px;
+    margin-left: 2px;
+}
+*{box-sizing: border-box;}
+
+.navibar{
+    background-color: #b61827;
+    width: 100%;
+}
+.navibar ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.navibar ul li{
+    display:inline-block;
+}
+.navibar ul li a{
+    display: block;
+    padding: 15px 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navibar ul li a:hover{
+    background-color: #e8a0a85d;
+}
+
+.welcomeimg img{
+    max-width: 100%;
+    display: flex;
+    align-items: left;
+    
+}
+.welcomepara h2{ 
+    display: flex;
+    max-width: 100%;
+    text-align: right;
+    font-family: cursive;
+    font-size: 1.75rem;
+}
+.welcomepara p{
+    max-width: 100%;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.welcomepara{
+    padding: auto;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.welcomepage{
+    display: flex;
+    background-color: #b61827;
+    border-radius: 10px;
+    
+}
+.heading{
+    text-align: center;
+    font-family: cursive;
+    color: #b61827;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 2rem;
+}
+
+.starter img{
+    width: 250px;
+    position: relative;
+    top: -80px;
+}
+.startertext{
+    width: 250px;
+    height: 200px;
+    padding: 5px;
+    background-color: #b61827;
+    text-align: center;
+    border-radius: 10px;
+    
+    
+}
+
+.starterlink{
+    width: 250px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    bottom: 95px;
+    left: 0px;
+
+}
+.starterlink a{
+    color: #b61827;
+    text-decoration: none;
+}
+.card1{
+    box-shadow: 0px 5px 10px black;
+    width: 250px;
+    border-radius: 10px;
+    transform: scale(1);
+}
+.card1:hover{
+    transform: scale(0.9);
+    transform: translateY(20px);
+    transition: ease 500ms;
+    box-shadow: none;
+}
+
+.contents{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainimg1 img{
+    width: 250px;
+    height: 220px;
+    position: relative;
+    bottom: 310px;
+}
+.mainimg1para{
+    width: 250px;
+    height: 500px;
+    background-color: #b61827;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.mainimg1link{
+    width: 125px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: relative;
+    bottom: 295px;
+    left: 60px;
+}
+.mainimg1link a{
+    text-decoration: none;
+    font-size: 1.255rem;
+    color: #b61827;
+    position: relative;
+    top: 15px;
+    left: 12.5px;
+}
+.maincard1{
+    width: 250px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 2px black;
+    transform: scale(1);
+}
+.maincard1:hover{
+    transform: scale(0.9);
+    transform: translateY(10px);
+    transition: ease 100ms;
+    box-shadow: none;
+}
+.maincard1:hover .mainimg1link{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    transition: ease 100ms;
+}
+.contents2{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.foot{
+    display: block;
+    background-color: #ff0000fb;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    top: 120px;
+}
+@media (max-width: 768px) {
+    .welcomepage {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    
+  
+    .logo {
+        width: 200px;
+        height: auto;
+        margin-left: 20px;
+    }
+    
+    .logo img {
+        height: 100px;
+        width: auto;
+        position: relative;}
+  
+    .caption h1,
+    .caption p,
+    .welcomepara h2,
+    .welcomepara p {
+      text-align: center;
+    }
+
+    .contents{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+  
+    .contents, .contents2 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .starter, .maincard1 {
+      margin-bottom: 30px;
+    }
+  
+    .foot {
+      font-size: 0.9rem;
+      padding: 15px;
+    }
+  
+    .navibar ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .navibar ul li a {
+      padding: 10px;
+    }
+  }

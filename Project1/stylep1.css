@@ -1,0 +1,69 @@
+.navbarstr{
+    height: 110px;
+    overflow: hidden;
+    box-shadow: 10px 1px 1px 10px rgba(0, 0, 0, 0.289);
+}
+.navbar img{
+    height: 320px;
+    object-fit: contain;
+    position: relative;
+    bottom: 105px;
+}
+.nvg{
+    color: rgba(255, 35, 35, 0.338);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nvg:hover {
+    color: rgba(158, 24, 24, 0.446);
+    text-decoration: underline;
+  }
+
+  
+
+.carousel-inner img{
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.caphox{
+  text-decoration: none;
+  position: absolute;
+  top:-80px;
+  left: 5px;
+}
+.caphox:hover{
+  text-decoration: underline;
+}
+
+.caphox2{
+  text-decoration: none;
+  position: absolute;
+  top:-80px;
+}
+.caphox2:hover{
+  text-decoration: underline;
+}
+.hovef{
+  transition: all 0.3s ease;
+}
+.hovef:hover{
+  transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(194, 193, 193, 0.599);
+}
+.hovef2{
+  transition: all 0.3s ease;
+}
+.hovef2:hover{
+  transform: scale(1.05);
+  box-shadow: 8px 8px 16px rgba(254, 60, 60, 0.589);
+}
+.hovef3{
+  transition: all 0.3s ease;
+}
+.hovef3:hover{
+  transform: scale(1.05);
+}
+
+

@@ -135,3 +135,28 @@ class Car:
             self.odometer_reading += miles
         else:
             print("Can't add negative miles")
+
+#Exercise 
+class Students:
+    def __init__(self,name, age):
+        self.name = name 
+        self.age = age 
+        self.grade = {}
+        print(f"The name of the student is {self.name} and their age is {self.age}")
+        
+
+    def add_grade(self,subject="Unknown",grade=0):
+        self.grade[subject] = grade 
+
+    def grade_avg(self):
+        if len(self.grade) == 0:
+            print ("Write Valid subject and grade")
+        else:
+            return sum (self.grade.values())/len(self.grade)
+
+    def print_avg(self):
+        print(f"Your Average grade for {len(self.grade)} subjects is = {self.grade_avg()}") 
+
+
+
+

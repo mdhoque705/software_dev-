@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+<h2>Checkout</h2>
+<form method="POST" onsubmit="return submitOrder();">
+  <input type="hidden" name="items" id="itemsInput">
+  <input type="hidden" name="total" id="totalInput">
+  <button class="btn btn-primary" type="submit">Place Order</button>
+</form>
+
+<script>
+  function submitOrder() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+      alert("Your cart is empty.");
+      return false;
+    }
+    const items = cart.map(item => item.name + " x" + item.quantity).join(", ");
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+
+    document.getElementById("itemsInput").value = items;
+    document.getElementById("totalInput").value = total;
+
+    localStorage.removeItem("cart");
+    return true;
+  }
+</script>
+{% endblock %}

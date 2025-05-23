@@ -1,0 +1,56 @@
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 140, 255, 0.4);
+  }
+  .hero-section {
+    background-color: #869843;
+    padding: 60px 5vw;
+  }
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3e2f2f;
+  }
+  .hero-subtitle {
+    color: #6c5a5a;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+  .hero-btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-weight: 500;
+  }
+  .btn-shop1 {
+    background-color: #6b9da6;
+    color: white;
+    border: none;
+  }
+  .btn-shop2 {
+    background-color: #a8c57e;
+    color: white;
+    border: none;
+  }
+  .hero-img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }  
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }

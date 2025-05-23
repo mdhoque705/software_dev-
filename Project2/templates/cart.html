@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Cart{% endblock %}
+{% block content %}
+<p class="mt-4">
+  <a href="{{ url_for('home') }}" class="btn btn-secondary">← Back to Home</a>
+</p>
+
+<h2>Your Cart</h2>
+<div id="cartItems"></div>
+<p><strong>Total: $<span id="totalPrice">0.00</span></strong></p>
+{% if session['user_id'] %}
+  <a href="{{ url_for('checkout') }}" class="btn btn-success">Proceed to Checkout</a>
+{% else %}
+  <a href="{{ url_for('login') }}" class="btn btn-warning">Login to Checkout</a>
+{% endif %}
+
+
+<script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cartHtml = "";
+  let total = 0;
+
+  if (cart.length === 0) {
+    cartHtml = "<p>Your cart is empty.</p>";
+  } else {
+    cart.forEach(item => {
+      cartHtml += `<p>${item.name} x ${item.quantity} = $${(item.price * item.quantity).toFixed(2)}</p>`;
+      total += item.price * item.quantity;
+    });
+  }
+
+  document.getElementById("cartItems").innerHTML = cartHtml;
+  document.getElementById("totalPrice").innerText = total.toFixed(2);
+</script>
+{% endblock %}

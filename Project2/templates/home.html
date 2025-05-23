@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="container-fluid hero-section">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center text-md-start">
+      <h1 class="hero-title">Fashion Meets Comfort</h1>
+      <p class="hero-subtitle">Elevate your wardrobe with stylish, comfortable essentials — perfect for daily wear.</p>
+      <a href="#tshirts" class="btn hero-btn btn-shop1">Shop T-Shirts</a>
+      <a href="#hoodies" class="btn hero-btn btn-shop2">Shop Hoodies</a>
+    </div>
+    <div class="col-md-6 text-center mt-4 mt-md-0">
+      <img src="{{ url_for('static', filename='hero.webp') }}" class="hero-img" alt="Hero Image">
+    </div>
+  </div>
+</div>
+
+
+<h2 class="mt-5" id="tshirts">T-Shirts</h2>
+<div class="row">
+  {% for product in tshirts %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top" alt="{{ product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">${{ product.price }}</p>
+          <button class="btn btn-primary" onclick="addToCart({{ product.id }}, '{{ product.name }}', {{ product.price }})">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<h2 class="mt-5" id="hoodies">Hoodies</h2>
+<div class="row">
+  {% for product in hoodies %}
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top" alt="{{ product.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">${{ product.price }}</p>
+          <button class="btn btn-primary" onclick="addToCart({{ product.id }}, '{{ product.name }}', {{ product.price }})">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  function addToCart(id, name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existing = cart.find(item => item.id === id);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ id, name, price, quantity: 1 });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+  }
+</script>
+
+<footer class="bg-dark text-light pt-4 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- About Us -->
+      <div class="col-md-4 mb-3">
+        <h5>About Us</h5>
+        <p class="small">
+          MyStore is your go-to destination for stylish T-shirts and cozy hoodies. We blend quality, comfort, and design — made for everyday wear.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ url_for('home') }}" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="{{ url_for('register') }}" class="text-light text-decoration-none">Register</a></li>
+          <li><a href="{{ url_for('login') }}" class="text-light text-decoration-none">Login</a></li>
+          <li><a href="{{ url_for('cart') }}" class="text-light text-decoration-none">Cart</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-3">
+        <h5>Follow Us</h5>
+        <a href="#" class="text-light me-3 text-decoration-none"><i class="bi bi-facebook"></i> Facebook</a><br>
+        <a href="#" class="text-light me-3 text-decoration-none"><i class="bi bi-instagram"></i> Instagram</a><br>
+
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4 pb-3 border-top pt-3">
+      <small>&copy; {{ current_year }} MyStore. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+
+{% endblock %}

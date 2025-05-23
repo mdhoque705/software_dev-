@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Order Confirmation{% endblock %}
+{% block content %}
+<h2>Thank you for your order!</h2>
+<p>Your order number is: <strong>{{ order_number }}</strong></p>
+<a href="{{ url_for('home') }}" class="btn btn-secondary">Back to Home</a>
+{% endblock %}
+"""
+
+# Save each HTML template to the templates folder
+templates_path = "/mnt/data/ecommerce-site/templates"
+with open(f"{templates_path}/register.html", "w") as f:
+    f.write(register_html)
+with open(f"{templates_path}/login.html", "w") as f:
+    f.write(login_html)
+with open(f"{templates_path}/cart.html", "w") as f:
+    f.write(cart_html)
+with open(f"{templates_path}/checkout.html", "w") as f:
+    f.write(checkout_html)
+with open(f"{templates_path}/confirmation.html", "w") as f:
+    f.write(confirmation_html)
